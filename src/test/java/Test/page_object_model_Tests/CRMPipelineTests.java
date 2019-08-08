@@ -118,12 +118,11 @@ public class CRMPipelineTests extends TestBase {
 
     }
 
-
+//**************************************************************************************
 //    Acceptance Criteria:
-//
-//            2. Verify that on the pivot table, the total expected revenue
+////          2. Verify that on the pivot table, the total expected revenue
 //            should be the sum of all opportunities’ expected revenue.
-
+//****************************************************************************************
 //    TEST CASE
 //    Steps:
 //        1.Login

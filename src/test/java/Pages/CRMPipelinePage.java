@@ -58,7 +58,6 @@ public class CRMPipelinePage {
     @FindBy(xpath = "//table/tbody/tr[3]/td[2]")
     public WebElement pivotLine2Price;
 
-    //table/tbody/tr/td[3]
 
     @FindBy(xpath = "//table/tbody/tr/td[3]")
     public List<WebElement> listColumn3;
@@ -88,44 +87,9 @@ public class CRMPipelinePage {
 
 
 
-    //**********
-    public double opportunityText() {
-        int index = 0;
-
-        List<WebElement> opportunity = Driver.get().findElements(By.xpath("//table/tbody/tr/td"));
-        List<String> OpportunityStr = new ArrayList<>();
-
-        for (WebElement str:opportunity) {
-            OpportunityStr.add(str.getText());
-        }
-        System.out.println("OpportunityStr = " + OpportunityStr.toString());
-
-
-        System.out.println("OpportunityStr size=" + OpportunityStr.size());
-
-        for (WebElement s : opportunity) {
-            System.out.println(s.getText());
-        }
-
-
-        for (int i = 0; i < opportunity.size(); i++) {
-            if (Driver.get().findElements(By.xpath("//table/tbody/tr["+i+"]/td[1]")).get(i).getText().contains("Book Sale")) {
-                index = i;
-                break;
-
-            }
-            BriteERPUtils.waitForUIOverlay();
-            Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            String revenue = Driver.get().findElement(By.xpath("//table/tbody/tr[index]/td[2]")).getText().replace(",", "");
-            double revenueDouble = Double.parseDouble(revenue);
-            return revenueDouble;
-        }
-
-       return 0;
-    }
 
 //************************ AC-2*******************************************
-// Acceptance criteria 2: Sumup the price on the relevant line of pivot version list
+// Acceptance criteria 2: Sum-up the price on the relevant line of pivot version list
 
     public double sumOfRevenue() {
         List<WebElement> totalRevenue = new ArrayList<>();
