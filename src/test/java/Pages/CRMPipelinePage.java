@@ -65,11 +65,21 @@ public class CRMPipelinePage {
 
     public double listColumnPrice(){
         int index = 0;
+        System.out.println("listColumn3Size= " + listColumn3.size());
+
         for(int i=0; i < listColumn3.size(); i++){
             if (listColumn3.get(i).getText().contains(pivotLine2.getText())){
-                index = i+1;
+                System.out.println("item price on the list version: " + listColumn3.get(i).getText());
+                index = i;
+//                System.out.println("index = " + index);
+//                System.out.println(listColumn3.get(i).getText());
+
+
             }
+
         }
+       // listButton.click();
+
         String listColumn3Str = Driver.get().findElement(By.xpath("//table/tbody/tr["+index+"]/td[9]")).getText();
         double listColumn3Price = Double.parseDouble(listColumn3Str.replace(",", ""));
 

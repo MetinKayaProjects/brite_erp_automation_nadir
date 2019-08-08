@@ -87,30 +87,14 @@ public class CRMPipelineTests extends TestBase {
 //*****************
         extentLogger.info("Finding the price of the item in the second row");
         BrowserUtils.waitForVisibility(crmPage.tablePivotBookSale, 10);
-       String revenuePivotName = crmPage.pivotLine2.getText();
+        String revenuePivotName = crmPage.pivotLine2.getText();
         System.out.println("revenuePivotName = " + revenuePivotName);
 
         String revenuePivotPrice = crmPage.pivotLine2Price.getText();
-       // System.out.println("revenuePivotPrice = " + revenuePivotPrice);
+        // System.out.println("revenuePivotPrice = " + revenuePivotPrice);
 
-         double revenuePivot = Double.parseDouble(revenuePivotPrice.replace(",", ""));
+        double revenuePivot = Double.parseDouble(revenuePivotPrice.replace(",", ""));
         System.out.println("revenuePivot = " + revenuePivot);
-
-
-//        String revenuePivot = crmPage.tablePivotBookSale.getText();
-//        System.out.println("revenuePivot = " + revenuePivot);
-//******************
-
-
-//       double revenuePivot = crmPage.opportunityText();
-//       System.out.println("revenuePivot = " + revenuePivot);
-
-//        VytrackUtils.waitForUIOverlay();
-//
-//       WebElement text = driver.findElement(By.xpath("//table/tbody/tr[4]/td[1][.='Book Sale']"));
-//       String texttext = text.getText();
-//        System.out.println("text = " + text);                               //table/tbody/tr[4]/td[1]
-
 
 
 //        8.Click the List button
