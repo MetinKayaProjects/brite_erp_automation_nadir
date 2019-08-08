@@ -38,7 +38,7 @@ public class TestBase {
         htmlReporter = new ExtentHtmlReporter(filePath);
         report.attachReporter(htmlReporter);
 
-        htmlReporter.config().setReportName("Vytrack automated test reports");
+        htmlReporter.config().setReportName("BriteERP automated test reports");
 
         report.setSystemInfo("Environment", "QA3");
         report.setSystemInfo("OS", System.getProperty("os.name"));
