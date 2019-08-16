@@ -24,7 +24,7 @@ public class CRMPipelineTests extends TestBase {
 //    User story: The system should display the correct information
 //    for each opportunity on the view list page and the pivot table.
 //
-//    Acceptance Criteria:
+//    Acceptance Criteria-1:
 //    1.Verify that second opportunity’ Expected Revenue value on the Pivot board
 //    should be the same as the Expected revenue column value on the list board.
 
@@ -102,7 +102,7 @@ public class CRMPipelineTests extends TestBase {
         crmPage.listButton.click();
 
 //        9.Verify the Book Sale expected REvenueis $500.00
-        extentLogger.info("Finding the price of the item in the first row");
+        extentLogger.info("Finding the pivot element in the list table");
         BrowserUtils.waitForVisibility(crmPage.tableListBookSale, 10);
 //        String revenueList = crmPage.tableListBookSale.getText();
 //        System.out.println("revenueList = " + revenueList);
@@ -114,7 +114,7 @@ public class CRMPipelineTests extends TestBase {
 //        should be the same as the Expected revenue column value on the list board
         extentLogger.info("Verifying that both prices of the item are equal");
         Assert.assertEquals(revenuePivot, revenueList);
-        extentLogger.pass("PASSED: Positive login as Driver");
+        extentLogger.pass("PASSED: Both prices are same");
 
     }
 
@@ -196,7 +196,7 @@ public class CRMPipelineTests extends TestBase {
 //        9.Verify the total price and sum up prices are the same
         extentLogger.info("Verifying that both prices of the items are equal");
         Assert.assertEquals(totalPriceDouble, sumUpTotal);
-        extentLogger.pass("PASSED: Positive login as Driver");
+        extentLogger.pass("PASSED: Both totals are same");
 
     }
 

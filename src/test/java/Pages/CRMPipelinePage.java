@@ -86,10 +86,12 @@ public class CRMPipelinePage {
     }
 
 
+//**************************************************************************************
+//                          AC-2                                                       *
+//**************************************************************************************
+// Acceptance criteria 2: Sum-up the price on the relevant line of pivot version list  *
+//**************************************************************************************
 
-
-//************************ AC-2*******************************************
-// Acceptance criteria 2: Sum-up the price on the relevant line of pivot version list
 
     public double sumOfRevenue() {
         List<WebElement> totalRevenue = new ArrayList<>();
